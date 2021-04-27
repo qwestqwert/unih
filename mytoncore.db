@@ -22,7 +22,7 @@
     "miner": {
         "appPath": "/usr/bin/ton/crypto/pow-miner"
     },
-    "sendTelemetry": true,
+    "sendTelemetry": false,
     "periods": {
         "elections": 600,
         "statistics": 10,
