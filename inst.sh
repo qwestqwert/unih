@@ -1,7 +1,7 @@
 #!/bin/bash
-#wget https://raw.githubusercontent.com/igroman787/mytonctrl/master/scripts/install.sh
-#ls -lh
-#sudo bash install.sh -m lite
+wget https://raw.githubusercontent.com/igroman787/mytonctrl/master/scripts/install.sh
+ls -lh
+sudo bash install.sh -m lite
 # автоустановка
 rm ton-lite-client-test1.config.json
 wget https://raw.githubusercontent.com/qwestqwert/unih/main/ton-lite-client-test1.config.json
