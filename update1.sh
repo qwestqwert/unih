@@ -19,4 +19,7 @@ wget https://newton-blockchain.github.io/global.config.json
 cd /
 wget https://raw.githubusercontent.com/qwestqwert/unih/main/inst.sh
 sudo bash inst.sh -m lite
+cp /usr/src/ton_backup/mytoncore.db /usr/local/bin/mytoncore/mytoncore.db
+cp /usr/src/ton_backup/mytoncore.py /usr/src/mytonctrl/mytoncore.py
+systemctl restart mytoncore
 #
