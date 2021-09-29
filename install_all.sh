@@ -23,6 +23,7 @@ wget https://newton-blockchain.github.io/global.config.json
 cd /
 wget https://raw.githubusercontent.com/qwestqwert/unih/main/inst.sh
 sudo bash inst.sh -m lite
+apt install -y mc
 COLOR='\033[92m'
 ENDC='\033[0m'
 mkdir /usr/src/ton_backup
