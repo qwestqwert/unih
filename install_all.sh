@@ -24,17 +24,17 @@ cd /
 wget https://raw.githubusercontent.com/qwestqwert/unih/main/inst.sh
 sudo bash inst.sh -m lite
 apt install -y mc
-COLOR='\033[92m'
-ENDC='\033[0m'
-mkdir /usr/src/ton_backup
-cd /usr/src/ton_backup
-echo -e "${COLOR}[1/2]${ENDC} Качаем модифицированный mytoncore.db"
-wget https://raw.githubusercontent.com/qwestqwert/unih/main/mytoncore.db
-cp /usr/src/ton_backup/mytoncore.db /usr/local/bin/mytoncore/mytoncore.db
-echo -e "${COLOR}[2/2]${ENDC} Качаем модифицированный mytoncore.py"
-wget https://raw.githubusercontent.com/qwestqwert/unih/main/mytoncore.py
-cp /usr/src/ton_backup/mytoncore.py /usr/src/mytonctrl/mytoncore.py
-systemctl restart mytoncore
+#COLOR='\033[92m'
+#ENDC='\033[0m'
+#mkdir /usr/src/ton_backup
+#cd /usr/src/ton_backup
+#echo -e "${COLOR}[1/2]${ENDC} Качаем модифицированный mytoncore.db"
+#wget https://raw.githubusercontent.com/qwestqwert/unih/main/mytoncore.db
+#cp /usr/src/ton_backup/mytoncore.db /usr/local/bin/mytoncore/mytoncore.db
+#echo -e "${COLOR}[2/2]${ENDC} Качаем модифицированный mytoncore.py"
+#wget https://raw.githubusercontent.com/qwestqwert/unih/main/mytoncore.py
+#cp /usr/src/ton_backup/mytoncore.py /usr/src/mytonctrl/mytoncore.py
+#systemctl restart mytoncore
 # End
-echo -e "${COLOR}[0]${ENDC} Готово!"
+#echo -e "${COLOR}[0]${ENDC} Готово!"
 #
