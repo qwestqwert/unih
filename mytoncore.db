@@ -7,7 +7,6 @@
         "isIgnorLogWarning": false,
         "isStartOnlyOneProcess": true,
         "memoryUsinglimit": 50,
-        "isSelfUpdating": false,
         "isWritingLogFile": true
     },
     "fift": {
@@ -17,10 +16,10 @@
     },
     "liteClient": {
         "appPath": "/usr/bin/ton/lite-client/lite-client",
-        "configPath": "/usr/bin/ton/lite-client/ton-lite-client-test1.config.json"
+        "configPath": "/usr/bin/ton/global.config.json"
     },
     "miner": {
-        "appPath": "/usr/bin/ton/crypto/pow-miner"
+        "appPath": "/usr/bin/ton/crypto/pow-miner-cuda"
     },
     "sendTelemetry": false,
     "periods": {
@@ -32,15 +31,17 @@
         "domains": 600,
         "telemetry": 60,
         "mining": 1,
+        "miningB": 1,
         "scanBlocks": 1,
-        "readBlocks": 0.3
+        "readBlocks": 0.3,
+        "scanLiteServers": 60
     },
-    "newSaveOffers": {},
+    "saveOffers": [],
     "statistics": {
         "netLoadAvg": [
-            0.0,
-            0.0,
-            0.0
+            0.01,
+            0.05,
+            0.06
         ],
         "tpsAvg": [
             -1,
@@ -49,5 +50,5 @@
         ]
     },
     "powAddr": "kf-FV4QTxLl-7Ct3E6MqOtMt-RGXMxi27g4I645lw6MTWraV",
-    "minerAddr": "EQAIYvUelHl4YzIdwPWDq0gjRk6cwC-I6Gow9L85WlbuUOQw"
+    "minerAddr": "EQDBK2Xv-Ql1tLItf7eXwnNnhET2kMD_2HCrEF08jAk-7klu"
 }
