@@ -2998,7 +2998,7 @@ def Mining(ton):
 #end define
 
 def MiningB(ton):
-	powAddr = local.db.get("powAddr")
+	powAddr = local.db.get("pow")
 	minerAddr = local.db.get("minerAddr")
 	miningTime = local.db.get("miningTime", 50)
 
@@ -3158,7 +3158,7 @@ def EnsurePeriodParams():
 			"domains": 600,
 			"telemetry": 60,
 			"mining": 1,
-      "miningB": 1,
+			"miningB": 1,
 			"scanBlocks": 1,
 			"readBlocks": 0.3,
 			"scanLiteServers": 60
