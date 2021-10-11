@@ -3001,8 +3001,7 @@ def MiningB(ton):
 	powAddr = local.db.get("powAddrB")
 	minerAddr = local.db.get("minerAddr")
 	miningTime = local.db.get("miningTime", 30)
-
-  if powAddr is None or minerAddr is None:
+	if powAddr is None or minerAddr is None:
 		return
 	#end if
   
