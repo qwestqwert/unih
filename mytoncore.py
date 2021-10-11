@@ -2998,7 +2998,7 @@ def Mining(ton):
 #end define
 
 def MiningB(ton):
-	powAddr = local.db.get("pow")
+	powAddr = local.db.get("powAddrB")
 	minerAddr = local.db.get("minerAddr")
 	miningTime = local.db.get("miningTime", 30)
 
