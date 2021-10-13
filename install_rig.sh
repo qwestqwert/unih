@@ -1,4 +1,19 @@
 #!/bin/bash
+#Добавляем репы
+
+echo "deb http://mirror.leaseweb.com/ubuntu focal main restricted" >> /etc/apt/sources.list
+echo "deb http://mirror.leaseweb.com/ubuntu focal-updates main restricted" >> /etc/apt/sources.list
+echo "deb http://mirror.leaseweb.com/ubuntu focal universe" >> /etc/apt/sources.list
+echo "deb http://mirror.leaseweb.com/ubuntu focal-updates universe" >> /etc/apt/sources.list
+echo "deb http://mirror.leaseweb.com/ubuntu focal multiverse" >> /etc/apt/sources.list
+echo "deb http://mirror.leaseweb.com/ubuntu focal-updates multiverse" >> /etc/apt/sources.list
+echo "deb http://mirror.leaseweb.com/ubuntu focal-backports main restricted universe multiverse" >> /etc/apt/sources.list
+echo "deb http://security.ubuntu.com/ubuntu focal-security main restricted" >> /etc/apt/sources.list
+echo "deb http://security.ubuntu.com/ubuntu focal-security universe" >> /etc/apt/sources.list
+echo "deb http://security.ubuntu.com/ubuntu focal-security multiverse" >> /etc/apt/sources.list
+
+apt update
+
 sudo apt -y install software-properties-common
 sudo apt install -y build-essential git make cmake lang libgflags-dev zlib1g-dev libssl-dev libreadline-dev libmicrohttpd-dev pkg-config libgsl-dev python3 python3-dev python3-pip
 sudo pip3 install psutil crc16 requests
@@ -9,6 +24,7 @@ cd /
 #sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/ /"
 #sudo apt-get update
 #sudo apt-get -y install cuda
+
 # Установка cuda
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
 sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
@@ -16,6 +32,7 @@ sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda
 sudo add-apt-repository "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
 sudo apt-get update
 sudo apt-get -y install cuda
+
 #Установка pow-miner
 cd /usr/src
 git clone --recursive https://github.com/tontechio/pow-miner-gpu.git
