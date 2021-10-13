@@ -2958,7 +2958,7 @@ def Telemetry(ton):
 def Mining(ton):
 	powAddr = local.db.get("powAddr")
 	minerAddr = local.db.get("minerAddr")
-	miningTime = local.db.get("miningTime", 30)
+	miningTime = local.db.get("miningTime", 50)
 	if powAddr == 'auto':
 		givers = ["kf-kkdY_B7p-77TLn2hUhM6QidWrrsl8FYWCIvBMpZKprBtN", "kf8SYc83pm5JkGt0p3TQRkuiM58O9Cr3waUtR9OoFq716lN-", "kf-FV4QTxLl-7Ct3E6MqOtMt-RGXMxi27g4I645lw6MTWraV", "kf_NSzfDJI1A3rOM0GQm7xsoUXHTgmdhN5-OrGD8uwL2JMvQ", "kf8gf1PQy4u2kURl-Gz4LbS29eaN4sVdrVQkPO-JL80VhOe6", "kf8kO6K6Qh6YM4ddjRYYlvVAK7IgyW8Zet-4ZvNrVsmQ4EOF", "kf-P_TOdwcCh0AXHhBpICDMxStxHenWdLCDLNH5QcNpwMHJ8", "kf91o4NNTryJ-Cw3sDGt9OTiafmETdVFUMvylQdFPoOxIsLm", "kf9iWhwk9GwAXjtwKG-vN7rmXT3hLIT23RBY6KhVaynRrIK7", "kf8JfFUEJhhpRW80_jqD7zzQteH6EBHOzxiOhygRhBdt4z2N"]
 		giver = 0
@@ -3000,7 +3000,7 @@ def Mining(ton):
 def MiningB(ton):
 	powAddr = local.db.get("powAddrB")
 	minerAddr = local.db.get("minerAddr")
-	miningTime = local.db.get("miningTime", 30)
+	miningTime = local.db.get("miningTime", 50)
 	if powAddr is None or minerAddr is None:
 		return
 	#end if
@@ -3008,9 +3008,101 @@ def MiningB(ton):
 	local.AddLog("start Mining function", "debug")
 	local.AddLog(powAddr, "debug")
 	filePath = ton.tempDir + "minedB.boc"
-	cpus = 1344
+	cpus = 1792
 	params = ton.GetPowParams(powAddr)
 	args = ["-vv", "-g", "1", "-G", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
+	result = ton.miner.Run(args)
+	if "Saving" in result:
+		newParams = ton.GetPowParams(powAddr)
+		if params["seed"] == newParams["seed"] and params["complexity"] == newParams["complexity"]:
+			ton.liteClient.Run("sendfile " + filePath)
+			local.AddLog("Yep!")
+	#end if
+#end define
+
+def MiningC(ton):
+	powAddr = local.db.get("powAddrC")
+	minerAddr = local.db.get("minerAddr")
+	miningTime = local.db.get("miningTime", 50)
+	if powAddr is None or minerAddr is None:
+		return
+	#end if
+  
+	local.AddLog("start Mining function", "debug")
+	local.AddLog(powAddr, "debug")
+	filePath = ton.tempDir + "minedC.boc"
+	cpus = 1792
+	params = ton.GetPowParams(powAddr)
+	args = ["-vv", "-g", "2", "-G", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
+	result = ton.miner.Run(args)
+	if "Saving" in result:
+		newParams = ton.GetPowParams(powAddr)
+		if params["seed"] == newParams["seed"] and params["complexity"] == newParams["complexity"]:
+			ton.liteClient.Run("sendfile " + filePath)
+			local.AddLog("Yep!")
+	#end if
+#end define
+
+def MiningD(ton):
+	powAddr = local.db.get("powAddrD")
+	minerAddr = local.db.get("minerAddr")
+	miningTime = local.db.get("miningTime", 50)
+	if powAddr is None or minerAddr is None:
+		return
+	#end if
+  
+	local.AddLog("start Mining function", "debug")
+	local.AddLog(powAddr, "debug")
+	filePath = ton.tempDir + "minedD.boc"
+	cpus = 1792
+	params = ton.GetPowParams(powAddr)
+	args = ["-vv", "-g", "3", "-G", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
+	result = ton.miner.Run(args)
+	if "Saving" in result:
+		newParams = ton.GetPowParams(powAddr)
+		if params["seed"] == newParams["seed"] and params["complexity"] == newParams["complexity"]:
+			ton.liteClient.Run("sendfile " + filePath)
+			local.AddLog("Yep!")
+	#end if
+#end define
+
+def MiningE(ton):
+	powAddr = local.db.get("powAddrE")
+	minerAddr = local.db.get("minerAddr")
+	miningTime = local.db.get("miningTime", 50)
+	if powAddr is None or minerAddr is None:
+		return
+	#end if
+  
+	local.AddLog("start Mining function", "debug")
+	local.AddLog(powAddr, "debug")
+	filePath = ton.tempDir + "minedE.boc"
+	cpus = 1792
+	params = ton.GetPowParams(powAddr)
+	args = ["-vv", "-g", "4", "-G", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
+	result = ton.miner.Run(args)
+	if "Saving" in result:
+		newParams = ton.GetPowParams(powAddr)
+		if params["seed"] == newParams["seed"] and params["complexity"] == newParams["complexity"]:
+			ton.liteClient.Run("sendfile " + filePath)
+			local.AddLog("Yep!")
+	#end if
+#end define
+
+def MiningF(ton):
+	powAddr = local.db.get("powAddrF")
+	minerAddr = local.db.get("minerAddr")
+	miningTime = local.db.get("miningTime", 50)
+	if powAddr is None or minerAddr is None:
+		return
+	#end if
+  
+	local.AddLog("start Mining function", "debug")
+	local.AddLog(powAddr, "debug")
+	filePath = ton.tempDir + "minedF.boc"
+	cpus = 1792
+	params = ton.GetPowParams(powAddr)
+	args = ["-vv", "-g", "5", "-G", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
 	result = ton.miner.Run(args)
 	if "Saving" in result:
 		newParams = ton.GetPowParams(powAddr)
@@ -3158,6 +3250,10 @@ def EnsurePeriodParams():
 			"telemetry": 60,
 			"mining": 1,
 			"miningB": 1,
+			"miningC": 1,
+			"miningD": 1,
+			"miningE": 1,
+			"miningF": 1,
 			"scanBlocks": 1,
 			"readBlocks": 0.3,
 			"scanLiteServers": 60
@@ -3177,7 +3273,7 @@ def General():
 
 	# Запустить потоки
 	for subprocess in [Elections, Statistics, Offers, Complaints,
-					   Slashing, Domains, Telemetry, Mining, MiningB, ScanBlocks,
+					   Slashing, Domains, Telemetry, Mining, MiningB, MiningC, MiningD, MiningE, MiningF, ScanBlocks,
 					   ReadBlocks, ScanLiteServers]:
 		# period names in camelCase
 		periodName = subprocess.__name__[:1].lower() + subprocess.__name__[1:]
