@@ -12,7 +12,7 @@
 #echo "deb http://security.ubuntu.com/ubuntu focal-security universe" >> /etc/apt/sources.list
 #echo "deb http://security.ubuntu.com/ubuntu focal-security multiverse" >> /etc/apt/sources.list
 
-apt update
+#apt update
 
 sudo apt -y install software-properties-common
 sudo apt install -y build-essential git make cmake lang libgflags-dev zlib1g-dev libssl-dev libreadline-dev libmicrohttpd-dev pkg-config libgsl-dev python3 python3-dev python3-pip
