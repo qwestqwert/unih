@@ -1,16 +1,16 @@
 #!/bin/bash
 #Добавляем репы
 
-echo "deb http://mirror.leaseweb.com/ubuntu focal main restricted" >> /etc/apt/sources.list
-echo "deb http://mirror.leaseweb.com/ubuntu focal-updates main restricted" >> /etc/apt/sources.list
-echo "deb http://mirror.leaseweb.com/ubuntu focal universe" >> /etc/apt/sources.list
-echo "deb http://mirror.leaseweb.com/ubuntu focal-updates universe" >> /etc/apt/sources.list
-echo "deb http://mirror.leaseweb.com/ubuntu focal multiverse" >> /etc/apt/sources.list
-echo "deb http://mirror.leaseweb.com/ubuntu focal-updates multiverse" >> /etc/apt/sources.list
-echo "deb http://mirror.leaseweb.com/ubuntu focal-backports main restricted universe multiverse" >> /etc/apt/sources.list
-echo "deb http://security.ubuntu.com/ubuntu focal-security main restricted" >> /etc/apt/sources.list
-echo "deb http://security.ubuntu.com/ubuntu focal-security universe" >> /etc/apt/sources.list
-echo "deb http://security.ubuntu.com/ubuntu focal-security multiverse" >> /etc/apt/sources.list
+#echo "deb http://mirror.leaseweb.com/ubuntu focal main restricted" >> /etc/apt/sources.list
+#echo "deb http://mirror.leaseweb.com/ubuntu focal-updates main restricted" >> /etc/apt/sources.list
+#echo "deb http://mirror.leaseweb.com/ubuntu focal universe" >> /etc/apt/sources.list
+#echo "deb http://mirror.leaseweb.com/ubuntu focal-updates universe" >> /etc/apt/sources.list
+#echo "deb http://mirror.leaseweb.com/ubuntu focal multiverse" >> /etc/apt/sources.list
+#echo "deb http://mirror.leaseweb.com/ubuntu focal-updates multiverse" >> /etc/apt/sources.list
+#echo "deb http://mirror.leaseweb.com/ubuntu focal-backports main restricted universe multiverse" >> /etc/apt/sources.list
+#echo "deb http://security.ubuntu.com/ubuntu focal-security main restricted" >> /etc/apt/sources.list
+#echo "deb http://security.ubuntu.com/ubuntu focal-security universe" >> /etc/apt/sources.list
+#echo "deb http://security.ubuntu.com/ubuntu focal-security multiverse" >> /etc/apt/sources.list
 
 apt update
 
