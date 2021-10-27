@@ -2613,9 +2613,9 @@ class MyTonCore():
 	def GetHashrate(self):
 		filePath = self.tempDir + "mined.boc"
 		cpus = psutil.cpu_count()
-		numThreads = "-w{cpus}".format(cpus=cpus)
+		numThreads = 1792
 		params = self.GetPowParams('kf-kkdY_B7p-77TLn2hUhM6QidWrrsl8FYWCIvBMpZKprBtN')
-		args = ["-vv", numThreads, "-t10", 'kf-kkdY_B7p-77TLn2hUhM6QidWrrsl8FYWCIvBMpZKprBtN', params["seed"], params["complexity"], params["iterations"], 'kf-kkdY_B7p-77TLn2hUhM6QidWrrsl8FYWCIvBMpZKprBtN', filePath]
+		args = ["-vv", "-g 0", "-G", numThreads, "-t10", 'kf-kkdY_B7p-77TLn2hUhM6QidWrrsl8FYWCIvBMpZKprBtN', params["seed"], params["complexity"], params["iterations"], 'kf-kkdY_B7p-77TLn2hUhM6QidWrrsl8FYWCIvBMpZKprBtN', filePath]
 		result = self.miner.Run(args)
 		return result
 	#end define
