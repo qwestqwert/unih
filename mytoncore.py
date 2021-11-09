@@ -2985,9 +2985,9 @@ def Mining(ton):
 	local.AddLog("start Mining function", "debug")
 	local.AddLog(powAddr, "debug")
 	filePath = ton.tempDir + "mined.boc"
-	cpus = 1344
+	cpus = 512
 	params = ton.GetPowParams(powAddr)
-	args = ["-vv", "-g", "0", "-G", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
+	args = ["-vv", "-g", "0", "-F", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
 	result = ton.miner.Run(args)
 	if "Saving" in result:
 		newParams = ton.GetPowParams(powAddr)
@@ -3008,9 +3008,9 @@ def MiningB(ton):
 	local.AddLog("start Mining function", "debug")
 	local.AddLog(powAddr, "debug")
 	filePath = ton.tempDir + "minedB.boc"
-	cpus = 1344
+	cpus = 512
 	params = ton.GetPowParams(powAddr)
-	args = ["-vv", "-g", "1", "-G", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
+	args = ["-vv", "-g", "1", "-F", cpus, "-t", miningTime, minerAddr, params["seed"], params["complexity"], params["iterations"], powAddr, filePath]
 	result = ton.miner.Run(args)
 	if "Saving" in result:
 		newParams = ton.GetPowParams(powAddr)
