@@ -21,7 +21,6 @@ wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix
 sudo dpkg -i zabbix-release_5.0-1+focal_all.deb
 sudo apt update
 sudo apt install zabbix-agent
-sudo nano /etc/zabbix/zabbix_agentd.conf
 cd /usr/src/ton_backup
 wget https://raw.githubusercontent.com/qwestqwert/unih/main/zabbix_agentd.conf
 cp /usr/src/ton_backup/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf
