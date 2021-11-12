@@ -7,7 +7,7 @@ sudo ufw allow ssh
 sudo ufw allow 10050
 #sudo ufw enable
 systemctl restart fail2ban
-sudo apt install software-properties-common
+sudo apt install software-properties-common -y
 wget https://raw.githubusercontent.com/igroman787/mytonctrl/master/scripts/install.sh
 sudo bash install.sh -m lite
 #Копируем конфиг
