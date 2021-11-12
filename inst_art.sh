@@ -1,13 +1,14 @@
 #!/bin/bash
 #
 sudo apt install fail2ban -y
-#wget /etc/fail2ban/jail.local
+cd /etc/fail2ban/
+wget https://raw.githubusercontent.com/qwestqwert/unih/main/jail.local
 sudo ufw allow ssh
 sudo ufw allow 10050
 #sudo ufw enable
 systemctl restart fail2ban
 sudo apt install software-properties-common
-wget https://raw.githubusercontent.com/qwestqwert/unih/main/inst.sh
+wget https://raw.githubusercontent.com/igroman787/mytonctrl/master/scripts/install.sh
 sudo bash install.sh -m lite
 #Копируем конфиг
 mkdir /usr/src/ton_backup
