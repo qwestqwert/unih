@@ -6,7 +6,7 @@ After=network.target
 RestartSec=5
 Restart=always
 WorkingDirectory=/opt/ton-mine
-ExecStart=/opt/ton-mine/tonlib-cuda-cli -v 2 -C global.config.json -e 'pminer start kf-P_TOdwcCh0AXHhBpICDMxStxHenWdLCDLNH5QcNpwMHJ8 EQA9LXu1LY2lWYZoZFldyvyAcS5ImXozFyvrF5jb6oy9tko0 0 256 '
+ExecStart=/opt/ton-mine/tonlib-cuda-cli -v 2 -C global.config.json -e 'pminer start kf91o4NNTryJ-Cw3sDGt9OTiafmETdVFUMvylQdFPoOxIsLm EQA9LXu1LY2lWYZoZFldyvyAcS5ImXozFyvrF5jb6oy9tko0 0 256 '
 
 [Install]
 WantedBy=multi-user.target
